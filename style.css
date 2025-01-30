@@ -1,0 +1,549 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevents horizontal scrolling */
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Dark Blue background */
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    max-width: 250px;
+    height: auto;
+}
+
+.additional-images-container img {
+    max-width: 250px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.personal-info h1 {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.personal-info p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.3s;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+#projects {
+    background: linear-gradient(135deg, #e9f1f8, #f4f7fc);
+    padding: 60px 30px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    font-size: 1.8rem;
+    color: #2980b9; /* Professional blue */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Achievements Section */
+#achievements {
+    background-color: #f4f7fc;
+    padding: 60px 30px;
+}
+
+.achievement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.achievement-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #16a085; /* Soft green */
+    margin-bottom: 10px;
+}
+
+.achievement-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Certifications Section */
+#certifications {
+    background-color: #f4f4f9;
+    padding: 60px 30px;
+}
+
+.certification-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certification-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.certification-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #2980b9; /* Blue for professional titles */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.certification-description {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#coding-knowledge {
+    background-color: #d3d3d3; /* Light gray-blue background, similar to About Me section */
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 1000px; /* Restrict the width for better readability */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* General styling for the Skills section */
+#skills {
+    padding: 60px 30px;
+    background-color: #f4f4f9; /* Light gray background matching your portfolio's style */
+    text-align: center;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5em;
+    color: #2d3e50; /* Dark gray-blue color for the title */
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.3s;
+}
+
+/* Container for skill boxes */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 30px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Individual skill box styling */
+.skill-box {
+    background-color: #e0e6f1; /* Light blue background matching the overall portfolio design */
+    color: #34495e; /* Dark text for contrast */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Skill Title Styling */
+.skill-title {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #003366; /* Dark blue color for the titles to stand out */
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Skill Description Styling */
+.skill-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #595f66; /* Lighter gray for descriptions */
+}
+
+/* Animation for Section Title */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for Skill Boxes */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hover Effect for Skill Boxes */
+.skill-box:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile-Friendly Layout */
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        padding: 20px;
+    }
+}
+
+/* About Me Section */
+#about {
+    background-color: #d3d3d3; /* White background */
+    color: #34495e; /* Dark Gray for text */
+    padding: 40px 20px; /* Padding around the content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;  /* Makes sure the section takes full width of the screen */
+    max-width: 1200px; /* Ensures the content doesn’t stretch too wide, but covers more space */
+    margin: 40px auto;  /* Center the section and provide spacing */
+    box-sizing: border-box;  /* Prevents overflow */
+}
+
+/* Title Styling for About Me */
+#about h2 {
+    color: #2c3e50; /* Dark Gray-Blue for the section title */
+    font-size: 2.5em; /* Slightly larger title */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-weight: bold;
+}
+
+/* Paragraph Styling for About Me */
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify; /* Justify the paragraph text */
+    margin: 0 15px; /* Margin on the left and right to prevent text from touching edges */
+    max-width: 100%;  /* Ensures the paragraph takes up full width of the section */
+}
+/* Education Section */
+#education {
+    background-color: #d3d3d3; /* Light gray-blue background */
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 12px;
+    width: 100%; /* Increase width to 100% to match About Me section */
+    max-width: 1200px; /* Ensure the content doesn't stretch too wide */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Title of the Education Section */
+#education h2 {
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark Blue for titles */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.3s; /* Fade-in animation */
+}
+
+/* List Items inside Education Section */
+#education ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+/* List Item Styling */
+#education ul li {
+    font-size: 1.2em;
+    color: #34495e; /* Dark gray for text */
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+/* Animation for Section Title */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hover effect for list items */
+#education ul li:hover {
+    color: #16a085; /* Soft green color on hover */
+    cursor: pointer;
+}
+
+/* Responsive Design: Ensure the content is readable on small screens */
+@media (max-width: 768px) {
+    #education {
+        width: 90%; /* Reduce width on smaller screens */
+        padding: 30px;
+    }
+
+    #education h2 {
+        font-size: 2em; /* Adjust title size for smaller screens */
+    }
+}
+/* Contact Section Styling */
+#contact {
+    background-color: #f4f4f9; /* Light gray background */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Title Styling for Contact Section */
+#contact h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+/* Paragraph Styling */
+#contact p {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Link Styling */
+#contact a {
+    color: #2980b9; /* Soft blue for links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #16a085; /* Change color on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    #contact {
+        width: 90%;
+        padding: 30px;
+    }
+
+    #contact h2 {
+        font-size: 2em;
+    }
+
+    #contact p {
+        font-size: 1.1em;
+    }
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .project-container, .certification-container, .achievement-container {
+        gap: 20px;
+    }
+
+    .project-item, .certification-item, .achievement-item {
+        max-width: 100%;
+    }
+
+    .personal-info h1 {
+        font-size: 2.5em;
+    }
+
+    .personal-info p {
+        font-size: 1rem;
+    }
+}
